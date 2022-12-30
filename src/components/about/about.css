@@ -41,7 +41,7 @@
     object-fit: cover;
 }
 
-.a-img2 {
+.a-img2{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -53,10 +53,9 @@
     font-weight: 300;
 }
 
-.a-desc-2{
+.a-desc-hide{
     padding-top: 10px;
     font-weight: 300;
-    padding-bottom: 10px;
 }
 
 @media screen and (max-width:480px) {
@@ -82,4 +81,7 @@
       padding: 20px;
     }
 
+    .a-desc-hide {
+      display: none;
+    }
 }

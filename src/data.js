@@ -25,14 +25,20 @@ export const products = [
     },
     {
       id: 5,
-      img: "https://www.theme-junkie.com/wp-content/uploads/Ober-wp-theme.jpg",
+      img: "https://miro.medium.com/max/1400/1*F6XL5Ox6-VzBJsFl7DdFgw.png",
       link: "https://github.com/JadenHow/Personal-Portfolio",
       title: "Personal Portfolio",
     },
     {
       id: 6,
-      img: "https://cdn.macstories.net/screen-shot-2021-09-01-at-10-41-51-am-1630511776581.png",
+      img: "https://appletoolbox.com/wp-content/uploads/2019/11/iOS-13-Reminders-iPad-and-iPhone.jpg",
       link: "https://github.com/JadenHow/Task-Manager",
       title: "Task Manager",
+    },
+    {
+      id: 7,
+      img: "https://media.blogto.com/articles/20171116-oneacademy-15.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70",
+      link: "https://github.com/JadenHow/Toronto-Fitness-Club",
+      title: "Toronto Fitness Club",
     },
 ];

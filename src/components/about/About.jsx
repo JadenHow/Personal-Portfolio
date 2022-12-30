@@ -28,15 +28,15 @@ const About = () => {
           help make people's lives easier.
         </p>
 
-        <p className="a-desc-1">Some of my technical skill sets include:</p>
-        <ul className="a-desc-1">
+        <p className="a-desc-hide">Some of my technical skill sets include:</p>
+        <ul className="a-desc-hide">
           <li>Python</li>
           <li>Java</li>
           <li>C</li>
           <li>C#</li>
         </ul>
-        <p className="a-desc-1">I'm also capable of:</p>
-        <ul className="a-desc-2">
+        <p className="a-desc-hide">I'm also capable of:</p>
+        <ul className="a-desc-hide">
           <li>HTML & CSS</li>
           <li>JavaScript</li>
           <li>NestJs</li>
@@ -44,7 +44,7 @@ const About = () => {
           <li>NodeJs</li>
           <li>ExpressJs</li>
         </ul>
-
+        <br/>
         <button
           onClick={() => {
             setImg1(!img1);
