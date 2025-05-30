@@ -1,10 +1,11 @@
-import React, { useState } from "react";
-import "./about.css";
-import Me2 from "../../img/me2.JPG";
-import KLCC from "../../img/KLCC.jpg";
+import React, { useState } from 'react';
+import './about.css';
+import Me2 from 'assets/me2.JPG';
+import KLCC from 'assets/KLCC.jpg';
 
 const About = () => {
   const [img1, setImg1] = useState(false);
+
   return (
     <div className="a">
       <div className="a-left">
@@ -19,13 +20,13 @@ const About = () => {
 
         <p className="a-desc-1">
           I was born in Malaysia and had been living there for most of my life.
-          I'm currently in Canada to pursue a degree in Computer Science at the
+          I&apos;m currently in Canada to pursue a degree in Computer Science at the
           University of Toronto.
         </p>
         <p className="a-desc-1">
           My dream career is to be a software engineer, as I would like to solve
           more challenging problems and collaborate with like-minded people to
-          help make people's lives easier.
+          help make people&apos;s lives easier.
         </p>
 
         <p className="a-desc-hide">Some of my technical skill sets include:</p>
@@ -35,7 +36,7 @@ const About = () => {
           <li>C</li>
           <li>C#</li>
         </ul>
-        <p className="a-desc-hide">I'm also capable of:</p>
+        <p className="a-desc-hide">I&apos;m also capable of:</p>
         <ul className="a-desc-hide">
           <li>HTML & CSS</li>
           <li>JavaScript</li>

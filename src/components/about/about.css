@@ -1,87 +1,87 @@
 .a{
-    height: 100vh;
-    display: flex;
-    align-items: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 }
 
 .a-left{
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    height: 100%;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 100%;
 }
 
 .a-right{
-    flex: 1;
+  flex: 1;
 }
 
 .a-card-bg{
-    background-color: #414128;
-    position: absolute;
-    width: 60%;
-    height: 70vh;
-    top: 50px;
-    right: 220px;
-    border-radius: 30px;
+  background-color: #414128;
+  position: absolute;
+  width: 60%;
+  height: 70vh;
+  top: 50px;
+  right: 220px;
+  border-radius: 30px;
 }
 
 .a-card{
-    width: 60%;
-    height: 70vh;
-    border-radius: 30px;
-    position: relative;
-    overflow: hidden;
+  width: 60%;
+  height: 70vh;
+  border-radius: 30px;
+  position: relative;
+  overflow: hidden;
 }
 
 .a-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .a-img2{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: 0% 0%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0% 0%;
 }
 
 .a-desc-1{
-    padding-top: 10px;
-    font-weight: 300;
+  padding-top: 10px;
+  font-weight: 300;
 }
 
 .a-desc-hide{
-    padding-top: 10px;
-    font-weight: 300;
+  padding-top: 10px;
+  font-weight: 300;
 }
 
 @media screen and (max-width:480px) {
-    .a{
-      flex-direction: column;
-      text-align: center;
-      margin-top: 50px;
-    }
+  .a{
+    flex-direction: column;
+    text-align: center;
+    margin-top: 50px;
+  }
 
-    .a-left {
-      width: 100%;
-    }
+  .a-left {
+    width: 100%;
+  }
 
-    .a-card {
-      height: 30vh;
-    }
+  .a-card {
+    height: 30vh;
+  }
 
-    .a-card-bg{
-      display: none;
-    }
+  .a-card-bg{
+    display: none;
+  }
 
-    .a-right{
-      padding: 20px;
-    }
+  .a-right{
+    padding: 20px;
+  }
 
-    .a-desc-hide {
-      display: none;
-    }
+  .a-desc-hide {
+    display: none;
+  }
 }
