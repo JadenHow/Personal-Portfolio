@@ -18,7 +18,7 @@ const Intro = () => {
             </div>
           </div>
           <div className="i-desc">
-            I&apos;m a Computer Science Specialist at the University of Toronto - St. George. I&apos;m inquisitive and always eager to learn new things as I strongly believe in consistent learning.
+            I&apos;m a Computer Science Specialist at the University of Toronto, passionate about backend engineering and solving real-world problems through code. I enjoy building reliable systems and continuously expanding my technical toolkit.
           </div>
         </div>
       </div>

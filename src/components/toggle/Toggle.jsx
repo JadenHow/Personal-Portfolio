@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import './toggle.css';
 import Sun from 'assets/sun.png';
 import Moon from 'assets/moon.png';
-import { ThemeContext } from 'context';
+import { ThemeContext } from 'contexts/ThemeContext';
 
 const Toggle = () => {
   const theme = useContext(ThemeContext);

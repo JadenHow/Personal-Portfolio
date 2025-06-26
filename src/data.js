@@ -1,44 +1,44 @@
 export const products = [
   {
     id: 1,
-    img: 'https://media-cldnry.s-nbcnews.com/image/upload/rockcms/2021-10/211025-smoke-refinery-france-ew-126p-bac40c.jpg',
-    link: 'https://github.com/JadenHow/Greenhouse-Gases-vs-Land-Ocean-Temperature',
-    title: 'Greenhouse Gases vs Land-Ocean Temperature'
-  },
-  {
-    id: 2,
     img: 'https://cdn.cloudflare.steamstatic.com/store/home/store_home_share.jpg',
     link: 'https://github.com/JadenHow/Steam-Games-Recommendations',
     title: 'Steam Games Recommendations'
   },
   {
-    id: 3,
-    img: 'http://thedailycougar.com/wp-content/uploads/2020/09/PRINT_Opinion_Socialize-and-Reach-out-to-others_JuanaGarcia.png',
+    id: 2,
+    img: 'https://i.natgeofe.com/k/a6c9f195-de20-445d-9d36-745ef56042c5/OG_Colosseum_Ancient-Rome_KIDS_1122_3x2.jpg',
     link: 'https://github.com/JadenHow/Brawlr',
-    title: 'Brawlr (Tinder Like App)'
+    title: 'Brawlr'
   },
   {
-    id: 4,
-    img: 'https://media.istockphoto.com/vectors/short-message-service-bubbles-with-place-for-text-chat-text-boxes-vector-id1131893484?k=20&m=1131893484&s=170667a&w=0&h=b-w6i1A2PT2hQjugiq9YkNQvZaFyS8PcqLaa23RMcVU=',
+    id: 3,
+    img: 'https://assets.justinmind.com/wp-content/uploads/2025/02/chatbot-ui-design-header-768x492.png',
     link: 'https://github.com/JadenHow/Server-and-Client-Communicator',
     title: 'Server and Client Communicator'
   },
   {
-    id: 5,
-    img: 'https://miro.medium.com/max/1400/1*F6XL5Ox6-VzBJsFl7DdFgw.png',
+    id: 4,
+    img: 'https://wpvip.edutopia.org/wp-content/uploads/2022/10/robinson-169hero-portfolio-shutterstock.jpg?w=2880&quality=85',
     link: 'https://github.com/JadenHow/Personal-Portfolio',
     title: 'Personal Portfolio'
   },
   {
-    id: 6,
+    id: 5,
     img: 'https://appletoolbox.com/wp-content/uploads/2019/11/iOS-13-Reminders-iPad-and-iPhone.jpg',
     link: 'https://github.com/JadenHow/Task-Manager',
     title: 'Task Manager'
   },
   {
-    id: 7,
-    img: 'https://media.blogto.com/articles/20171116-oneacademy-15.jpg?w=2048&cmd=resize_then_crop&height=1365&quality=70',
+    id: 6,
+    img: 'https://b3327586.smushcdn.com/3327586/wp-content/uploads/2024/05/gb-botanica-gym-link-spaces-slough-1024x683.jpg?lossy=0&strip=1&webp=1',
     link: 'https://github.com/JadenHow/Toronto-Fitness-Club',
     title: 'Toronto Fitness Club'
+  },
+  {
+    id: 7,
+    img: 'https://www.theroyalhotel.ca/wp-content/uploads/2021/12/TheRoyal_Rooms_Cortland_Bed-scaled.jpg?x76931',
+    link: 'https://github.com/JadenHow/RoyalHorizonHotel-Backend',
+    title: 'Royal Horizon Hotel'
   }
 ];

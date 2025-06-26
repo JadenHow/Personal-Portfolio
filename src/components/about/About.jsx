@@ -1,60 +1,115 @@
 import React, { useState } from 'react';
-import './about.css';
 import Me2 from 'assets/me2.JPG';
 import KLCC from 'assets/KLCC.jpg';
+import { FaCode, FaTools, FaCogs } from 'react-icons/fa';
+import { useWindowSize } from 'contexts/WindowSizeContext';
+import {
+  Container,
+  Left,
+  Right,
+  CardBg,
+  Card,
+  StyledImg,
+  Title,
+  Description,
+  SectionTitle,
+  SkillsGrid,
+  SkillHeading,
+  SkillIcon,
+  SkillList,
+  ToggleButton
+} from './styles';
 
 const About = () => {
   const [img1, setImg1] = useState(false);
+  const { isXSmall, isSmall, isMedium, isLarge } = useWindowSize();
+
+  const isMobile = isXSmall || isSmall;
+  const isTablet = isMedium || isLarge;
 
   return (
-    <div className="a">
-      <div className="a-left">
-        <div className="a-card-bg"></div>
-        <div className="a-card">
-          {img1 || <img src={Me2} alt="" className="a-img" />}
-          {!img1 || <img src={KLCC} alt="" className="a-img2" />}
-        </div>
-      </div>
-      <div className="a-right">
-        <h1 className="a-title">About Me</h1>
+    <Container isMobile={isMobile} isTablet={isTablet}>
+      <Left isMobile={isMobile} isTablet={isTablet}>
+        {!isMobile && !isTablet && <CardBg />}
+        <Card isMobile={isMobile} isTablet={isTablet}>
+          <StyledImg src={img1 ? KLCC : Me2} alt="Profile" isAlt={img1} />
+        </Card>
+      </Left>
 
-        <p className="a-desc-1">
-          I was born in Malaysia and had been living there for most of my life.
-          I&apos;m currently in Canada to pursue a degree in Computer Science at the
-          University of Toronto.
-        </p>
-        <p className="a-desc-1">
-          My dream career is to be a software engineer, as I would like to solve
-          more challenging problems and collaborate with like-minded people to
-          help make people&apos;s lives easier.
-        </p>
+      <Right>
+        {isMobile || isTablet
+          ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <Title isMobile={isMobile} isTablet={isTablet}>About Me</Title>
+          </div>
+          : <Title isMobile={isMobile} isTablet={isTablet}>About Me</Title>}
+        <Description>
+          I&apos;m currently based in Toronto and pursuing a degree in Computer Science at the University of Toronto.
+        </Description>
+        <Description>
+          I&apos;m driven by a passion for backend development and aspire to become a software engineer who solves
+          challenging problems and builds solutions that improve lives.
+        </Description>
 
-        <p className="a-desc-hide">Some of my technical skill sets include:</p>
-        <ul className="a-desc-hide">
-          <li>Python</li>
-          <li>Java</li>
-          <li>C</li>
-          <li>C#</li>
-        </ul>
-        <p className="a-desc-hide">I&apos;m also capable of:</p>
-        <ul className="a-desc-hide">
-          <li>HTML & CSS</li>
-          <li>JavaScript</li>
-          <li>NestJs</li>
-          <li>ReactJs</li>
-          <li>NodeJs</li>
-          <li>ExpressJs</li>
-        </ul>
-        <br/>
-        <button
-          onClick={() => {
-            setImg1(!img1);
-          }}
-        >
-          Click here to see a picture I took in Malaysia!
-        </button>
-      </div>
-    </div>
+        {isMobile || isTablet
+          ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <SectionTitle>Technical Skills</SectionTitle>
+          </div>
+          : <SectionTitle>Technical Skills</SectionTitle>}
+        <SkillsGrid>
+          <div>
+            <SkillHeading>
+              <FaCode style={{ ...SkillIcon }} /> Languages
+            </SkillHeading>
+            <SkillList>
+              <li>Python</li>
+              <li>Go</li>
+              <li>Java</li>
+              <li>Kotlin</li>
+              <li>C</li>
+              <li>JavaScript</li>
+              <li>SQL</li>
+              <li>Bash</li>
+              <li>HTML/CSS</li>
+            </SkillList>
+          </div>
+
+          <div>
+            <SkillHeading>
+              <FaTools style={{ ...SkillIcon }} /> Frameworks & Libraries
+            </SkillHeading>
+            <SkillList>
+              <li>FastAPI</li>
+              <li>Spring Boot</li>
+              <li>Django</li>
+              <li>.NET</li>
+              <li>Node.js</li>
+              <li>React.js</li>
+              <li>Express.js</li>
+              <li>Nest.js</li>
+              <li>Redis</li>
+            </SkillList>
+          </div>
+
+          <div>
+            <SkillHeading>
+              <FaCogs style={{ ...SkillIcon }} /> Technologies & Tools
+            </SkillHeading>
+            <SkillList>
+              <li>REST APIs, GraphQL</li>
+              <li>Docker, Kubernetes, GKE</li>
+              <li>CI/CD, GitHub Actions, Jenkins</li>
+              <li>Linux/Unix, Git, NoSQL</li>
+              <li>Microservices, SDLC</li>
+              <li>Machine Learning</li>
+            </SkillList>
+          </div>
+        </SkillsGrid>
+
+        {!isMobile && !isTablet && <ToggleButton onClick={() => setImg1(!img1)}>
+          Click here to see a picture I took!
+        </ToggleButton>}
+      </Right>
+    </Container>
   );
 };
 
