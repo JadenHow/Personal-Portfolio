@@ -10,7 +10,7 @@ const ProductList = () => {
   const isTablet = isMedium || isLarge;
 
   const containerStyle = {
-    padding: isMobile ? '1rem' : isTablet ? '2rem 3rem' : '3rem 6rem',
+    padding: isMobile || isTablet ? '2rem 3rem' : '3rem 6rem',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
@@ -24,7 +24,7 @@ const ProductList = () => {
   };
 
   const titleStyle = {
-    fontSize: isMobile ? '2rem' : isTablet ? '2.5rem' : '3rem',
+    fontSize: '2rem',
     fontWeight: 600,
     marginBottom: '1rem'
   };

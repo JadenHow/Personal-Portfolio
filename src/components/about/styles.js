@@ -54,7 +54,7 @@ export const StyledImg = styled.img`
 `;
 
 export const Title = styled.h1`
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.625rem;
 `;

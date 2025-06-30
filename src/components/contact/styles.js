@@ -5,33 +5,31 @@ export const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
 `;
 
 export const Card = styled.div`
-  padding: 2rem 2.5rem;
+  padding: ${({ isMobile }) => (isMobile ? '0' : '2rem 2.5rem')};
   border-radius: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   max-width: 900px;
   width: 100%;
 `;
 
 export const Title = styled.h1`
-  font-size: 2.25rem;
+  font-size: 2rem;
   text-align: center;
-  margin-bottom: 1rem;
+  margin: ${({ isMobile }) => (isMobile ? '1rem' : '0 0 1rem 0')};
 `;
 
 export const Subtitle = styled.p`
-  font-size: 1.05rem;
+  font-size: 1rem;
   text-align: center;
-  margin-bottom: 2rem;
+  margin: ${({ isMobile }) => (isMobile ? '1rem' : '0 0 2rem 0')};
 `;
 
 export const FormWrapper = styled.div`
   border-radius: 1rem;
   overflow: hidden;
-  border: 1px solid #e0e0e0;
+  border: ${({ isMobile }) => (isMobile ? '' : '1px solid #e0e0e0')};
 `;
 
 export const StyledIframe = styled.iframe`

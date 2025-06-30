@@ -24,8 +24,8 @@ const Timeline = () => {
   return (
     <div className="timeline-container">
       <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-        <h1 style={{ fontSize: '50px', fontWeight: 600 }}>Timeline</h1>
-        <p>A Quick Adventure Through My Coding Journey</p>
+        <h1 style={{ fontSize: '2rem', fontWeight: 600 }}>Timeline</h1>
+        <p style={{ fontSize: '1rem' }}>A Quick Adventure Through My Coding Journey</p>
       </div>
 
       <VerticalTimeline lineColor="#5c2d91">
