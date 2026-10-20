@@ -1,25 +1,16 @@
-import React, { useContext } from 'react';
-import { ThemeContext } from 'contexts/ThemeContext';
+import React from 'react';
 
-const Badge = ({ text }) => {
-  const { state: { darkMode } } = useContext(ThemeContext);
-
-  return (
-    <span
-      style={{
-        display: 'inline-block',
-        backgroundColor: darkMode ? '#333' : '#f4f4f4',
-        color: darkMode ? '#f4f4f4' : '#333',
-        borderRadius: '8px',
-        padding: '2px 8px',
-        fontSize: '12px',
-        marginRight: '5px',
-        marginBottom: '5px'
-      }}
-    >
-      {text}
-    </span>
-  );
+const badgeStyle = {
+  display: 'inline-block',
+  backgroundColor: 'var(--surface-muted)',
+  color: 'var(--text)',
+  borderRadius: '8px',
+  padding: '2px 8px',
+  fontSize: '12px',
+  marginRight: '5px',
+  marginBottom: '5px'
 };
+
+const Badge = ({ text }) => <span style={badgeStyle}>{text}</span>;
 
 export default Badge;

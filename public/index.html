@@ -10,10 +10,45 @@
   <meta property="og:title" content="Jaden How | Software Engineer" />
   <meta property="og:description" content="Backend-focused software engineer and University of Toronto Computer Science graduate." />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <script>
+    (function () {
+      var theme;
+      try { theme = localStorage.getItem('theme'); } catch (e) {}
+      if (theme !== 'dark' && theme !== 'light') {
+        theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.dataset.theme = theme;
+    })();
+  </script>
   <style>
+    :root {
+      --bg: #ffffff;
+      --text: #111111;
+      --surface: #ffffff;
+      --surface-muted: #f3f2f2;
+      --border: #e0e0e0;
+      --accent-text: #5c2d91;
+      color-scheme: light;
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #222222;
+      --text: #f4f4f4;
+      --surface: #2f2f2f;
+      --surface-muted: #3d3d3d;
+      --border: #444444;
+      --accent-text: #c084fc;
+      color-scheme: dark;
+    }
+
     * {
       margin: 0;
       font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
     }
   </style>
   <title>Jaden How | Software Engineer</title>

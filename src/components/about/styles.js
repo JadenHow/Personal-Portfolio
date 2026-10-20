@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: ${({ isMobile, isTablet }) => (isMobile || isTablet ? 'column' : 'row')};
+  flex-direction: ${({ $isMobile, $isTablet }) => ($isMobile || $isTablet ? 'column' : 'row')};
   align-items: center;
   padding: 1.25rem;
   box-sizing: border-box;
   flex-wrap: wrap;
-  height: ${({ isMobile, isTablet }) => (isMobile || isTablet ? 'auto' : '100vh')};
+  height: ${({ $isMobile, $isTablet }) => ($isMobile || $isTablet ? 'auto' : '100vh')};
   gap: 2rem;
 `;
 
@@ -17,7 +17,7 @@ export const Left = styled.div`
   align-items: center;
   justify-content: center;
   position: relative;
-  height: ${({ isMobile, isTablet }) => (isMobile || isTablet ? 'auto' : '100%')};
+  height: ${({ $isMobile, $isTablet }) => ($isMobile || $isTablet ? 'auto' : '100%')};
   min-width: 300px;
 `;
 
@@ -38,8 +38,8 @@ export const CardBg = styled.div`
 `;
 
 export const Card = styled.div`
-  width: ${({ isMobile, isTablet }) => (isMobile || isTablet ? '100%' : '60%')};
-  height: ${({ isMobile, isTablet }) => (isMobile || isTablet ? '35vh' : '70vh')};
+  width: ${({ $isMobile, $isTablet }) => ($isMobile || $isTablet ? '100%' : '60%')};
+  height: ${({ $isMobile, $isTablet }) => ($isMobile || $isTablet ? '35vh' : '70vh')};
   border-radius: 1.875rem;
   position: relative;
   overflow: hidden;
@@ -50,7 +50,7 @@ export const StyledImg = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: ${({ isAlt }) => (isAlt ? '0% 0%' : 'center')};
+  object-position: ${({ $isAlt }) => ($isAlt ? '0% 0%' : 'center')};
 `;
 
 export const Title = styled.h1`
@@ -81,7 +81,7 @@ export const SkillsGrid = styled.div`
 
 export const SkillHeading = styled.p`
   font-weight: 600;
-  color: #5c2d91;
+  color: var(--accent-text);
   font-size: 1rem;
   display: flex;
   align-items: center;
