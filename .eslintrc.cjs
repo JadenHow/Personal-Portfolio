@@ -12,7 +12,7 @@ module.exports = {
       env: {
         node: true,
       },
-      files: ['.eslintrc.{js,cjs}'],
+      files: ['.eslintrc.{js,cjs}', 'vite.config.js'],
       parserOptions: {
         sourceType: 'script',
       },
@@ -25,6 +25,11 @@ module.exports = {
   plugins: [
     'react',
   ],
+  settings: {
+    react: {
+      version: 'detect',
+    },
+  },
   rules: {
     semi: ['error', 'always'],
     indent: ['error', 2, { SwitchCase: 1 }],
