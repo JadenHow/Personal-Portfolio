@@ -35,7 +35,7 @@ const Product = ({ icon: Icon, gradient, tagline, link, title }) => {
 
   const browserStyle = {
     height: '1.25rem',
-    backgroundColor: 'rgb(243, 242, 242)',
+    backgroundColor: 'var(--surface-muted)',
     display: 'flex',
     alignItems: 'center',
     padding: '0 0.5rem',
@@ -47,7 +47,7 @@ const Product = ({ icon: Icon, gradient, tagline, link, title }) => {
     width: '0.5rem',
     height: '0.5rem',
     borderRadius: '50%',
-    backgroundColor: 'white'
+    backgroundColor: 'var(--bg)'
   };
 
   const coverStyle = {

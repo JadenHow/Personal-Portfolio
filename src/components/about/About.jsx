@@ -28,20 +28,20 @@ const About = () => {
   const isTablet = isMedium || isLarge;
 
   return (
-    <Container isMobile={isMobile} isTablet={isTablet}>
-      <Left isMobile={isMobile} isTablet={isTablet}>
+    <Container $isMobile={isMobile} $isTablet={isTablet}>
+      <Left $isMobile={isMobile} $isTablet={isTablet}>
         {!isMobile && !isTablet && <CardBg />}
-        <Card isMobile={isMobile} isTablet={isTablet}>
-          <StyledImg src={img1 ? KLCC : Me2} alt={img1 ? 'Petronas Twin Towers in Kuala Lumpur at night' : 'Jaden How'} isAlt={img1} />
+        <Card $isMobile={isMobile} $isTablet={isTablet}>
+          <StyledImg src={img1 ? KLCC : Me2} alt={img1 ? 'Petronas Twin Towers in Kuala Lumpur at night' : 'Jaden How'} $isAlt={img1} />
         </Card>
       </Left>
 
       <Right>
         {isMobile || isTablet
           ? <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            <Title isMobile={isMobile} isTablet={isTablet}>About Me</Title>
+            <Title $isMobile={isMobile} $isTablet={isTablet}>About Me</Title>
           </div>
-          : <Title isMobile={isMobile} isTablet={isTablet}>About Me</Title>}
+          : <Title $isMobile={isMobile} $isTablet={isTablet}>About Me</Title>}
         <Description>
           I&apos;m based in Toronto and graduated from the University of Toronto with a Computer Science Specialist degree.
         </Description>

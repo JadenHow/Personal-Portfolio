@@ -5,17 +5,21 @@ import Moon from 'assets/moon.png';
 import { ThemeContext } from 'contexts/ThemeContext';
 
 const Toggle = () => {
-  const theme = useContext(ThemeContext);
-  const handleClick = () => {
-    theme.dispatch({ type: 'TOGGLE' });
-  };
+  const { state: { darkMode }, dispatch } = useContext(ThemeContext);
 
   return (
-    <div className='t'>
+    <button
+      type="button"
+      className="t"
+      role="switch"
+      aria-checked={darkMode}
+      aria-label="Dark mode"
+      onClick={() => dispatch({ type: 'TOGGLE' })}
+    >
       <img src={Sun} alt="" className="t-icon" />
       <img src={Moon} alt="" className="t-icon" />
-      <div className="t-button" onClick={handleClick} style={{ left: theme.state.darkMode ? 0 : 25 }}></div>
-    </div>
+      <span className="t-button" style={{ left: darkMode ? 0 : 25 }}></span>
+    </button>
   );
 };
 

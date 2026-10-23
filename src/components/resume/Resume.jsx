@@ -18,12 +18,16 @@ const Resume = () => {
       <ResumeWrapper>
         <ResumeIframe
           src="https://drive.google.com/file/d/16jjYzWaowHHl3utBhvRg02FhDiu_Hrc9/preview"
-          allow="autoplay"
+          title="Jaden How's resume"
         />
       </ResumeWrapper>
-      <a href="https://drive.google.com/file/d/16jjYzWaowHHl3utBhvRg02FhDiu_Hrc9/view?usp=drive_link" target="_blank" rel="noreferrer">
-        <ResumeButton>Open in Google Drive</ResumeButton>
-      </a>
+      <ResumeButton
+        href="https://drive.google.com/file/d/16jjYzWaowHHl3utBhvRg02FhDiu_Hrc9/view?usp=drive_link"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Open in Google Drive
+      </ResumeButton>
     </ResumeSection>
   );
 };

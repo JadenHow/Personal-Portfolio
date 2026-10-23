@@ -1,8 +1,9 @@
 .t{
   width: 50px;
   height: 25px;
+  padding: 0;
   border-radius: 20px;
-  border: 1pz solid #999;
+  border: 1px solid #999;
   background-color: white;
   position: fixed;
   top: 10px;
@@ -11,6 +12,12 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
+  cursor: pointer;
+}
+
+.t:focus-visible{
+  outline: 2px solid #7e22ce;
+  outline-offset: 2px;
 }
 
 .t-icon{
@@ -24,5 +31,6 @@
   border-radius: 50%;
   background-color: #999;
   position: absolute;
-  cursor: pointer;
+  top: -1px;
+  transition: left 0.2s ease;
 }

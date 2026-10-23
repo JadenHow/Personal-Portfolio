@@ -58,7 +58,7 @@
   height: 50px;
   font-size: 30px;
   font-weight: bold;
-  color: purple;
+  color: var(--accent-text);
   display: flex;
   align-items: center;
 }

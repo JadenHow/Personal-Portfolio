@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Card = styled.div`
-  padding: ${({ isMobile }) => (isMobile ? '0' : '2rem 2.5rem')};
+  padding: ${({ $isMobile }) => ($isMobile ? '0' : '2rem 2.5rem')};
   border-radius: 2rem;
   max-width: 900px;
   width: 100%;
@@ -17,19 +17,19 @@ export const Card = styled.div`
 export const Title = styled.h1`
   font-size: 2rem;
   text-align: center;
-  margin: ${({ isMobile }) => (isMobile ? '1rem' : '0 0 1rem 0')};
+  margin: ${({ $isMobile }) => ($isMobile ? '1rem' : '0 0 1rem 0')};
 `;
 
 export const Subtitle = styled.p`
   font-size: 1rem;
   text-align: center;
-  margin: ${({ isMobile }) => (isMobile ? '1rem' : '0 0 2rem 0')};
+  margin: ${({ $isMobile }) => ($isMobile ? '1rem' : '0 0 2rem 0')};
 `;
 
 export const FormWrapper = styled.div`
   border-radius: 1rem;
   overflow: hidden;
-  border: ${({ isMobile }) => (isMobile ? '' : '1px solid #e0e0e0')};
+  border: ${({ $isMobile }) => ($isMobile ? '' : '1px solid var(--border)')};
 `;
 
 export const StyledIframe = styled.iframe`

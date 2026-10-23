@@ -25,7 +25,7 @@ export const ResumeWrapper = styled.div`
   max-width: 900px;
   border-radius: 1rem;
   overflow: hidden;
-  border: 1px solid #e0e0e0;
+  border: 1px solid var(--border);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 `;
 
@@ -38,7 +38,9 @@ export const ResumeIframe = styled.iframe`
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 `;
 
-export const ResumeButton = styled.button`
+export const ResumeButton = styled.a`
+  display: inline-block;
+  text-decoration: none;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   font-weight: 500;
