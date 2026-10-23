@@ -1,37 +1,43 @@
 import React from 'react';
-import {
-  Container,
-  Card,
-  Title,
-  Subtitle,
-  FormWrapper,
-  StyledIframe
-} from './styles';
+import { FaEnvelope, FaLinkedin } from 'react-icons/fa';
+import { profile } from 'data';
+import { Container, PrimaryButton, SecondaryButton } from 'components/ui/styles';
+import { Wrapper, Card, Title, Lead, Actions, EmailText, Footer } from './styles';
 
-import { useWindowSize } from 'contexts/WindowSizeContext';
+const CONTACT_FORM = 'https://docs.google.com/forms/d/e/1FAIpQLSfuVCn43_i6UuEHvYkL2OmBLMuzZt_lgKH6QfrgHkzqPaT6fA/viewform';
 
-const Contact = () => {
-  const { isXSmall, isSmall, isMedium, isLarge } = useWindowSize();
-  const isMobile = isXSmall || isSmall;
-  const isTablet = isMedium || isLarge;
-
-  return (
+const Contact = () => (
+  <Wrapper id="contact" aria-labelledby="contact-title">
     <Container>
-      <Card isMobile={isMobile || isTablet}>
-        <Title isMobile={isMobile || isTablet}>📬 Let&apos;s Connect</Title>
-        <Subtitle isMobile={isMobile || isTablet}>
-          Have questions about my work or just want to say hi? Fill out the form below and I&apos;ll get back to you!
-        </Subtitle>
-        <FormWrapper isMobile={isMobile || isTablet}>
-          <StyledIframe
-            src="https://docs.google.com/forms/d/e/1FAIpQLSfuVCn43_i6UuEHvYkL2OmBLMuzZt_lgKH6QfrgHkzqPaT6fA/viewform?embedded=true"
-            title="Contact Form"
-            height="750"
-          />
-        </FormWrapper>
+      <Card>
+        <Title id="contact-title">Let&apos;s build something together</Title>
+        <Lead>
+          I&apos;m looking for my next backend or full-stack role. If you&apos;re hiring, or just want to talk
+          systems, my inbox is open.
+        </Lead>
+        <Actions>
+          <PrimaryButton href={`mailto:${profile.email}`}>
+            <FaEnvelope aria-hidden="true" /> Email me
+          </PrimaryButton>
+          <SecondaryButton href={profile.linkedin} target="_blank" rel="noreferrer">
+            <FaLinkedin aria-hidden="true" /> Connect on LinkedIn
+          </SecondaryButton>
+        </Actions>
+        <EmailText>
+          {profile.email} · or use the <a href={CONTACT_FORM} target="_blank" rel="noreferrer">contact form</a>
+        </EmailText>
       </Card>
+
+      <Footer>
+        <span>© {new Date().getFullYear()} {profile.name} · Built with React</span>
+        <nav aria-label="Social">
+          <a href={profile.github} target="_blank" rel="noreferrer">GitHub</a>
+          <a href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href={profile.resume} target="_blank" rel="noreferrer">Resume</a>
+        </nav>
+      </Footer>
     </Container>
-  );
-};
+  </Wrapper>
+);
 
 export default Contact;
