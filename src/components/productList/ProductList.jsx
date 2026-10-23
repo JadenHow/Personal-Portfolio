@@ -2,6 +2,7 @@ import React from 'react';
 import Product from '../product/Product';
 import { products } from '../../data';
 import { useWindowSize } from 'contexts/WindowSizeContext';
+import { FaLinkedin } from 'react-icons/fa';
 
 const ProductList = () => {
   const { isXSmall, isSmall, isMedium, isLarge } = useWindowSize();
@@ -43,9 +44,9 @@ const ProductList = () => {
     gap: '1.5rem'
   };
 
-  const linkedinImgStyle = {
-    width: isMobile ? '20%' : '10%',
-    height: 'auto',
+  const linkedinIconStyle = {
+    fontSize: isMobile ? '4rem' : '5rem',
+    color: '#0a66c2',
     paddingTop: isMobile ? '1rem' : '0'
   };
 
@@ -66,17 +67,25 @@ const ProductList = () => {
         )}
       </div>
 
-      <a href="https://www.linkedin.com/in/jaden-how02/" target="_blank" rel="noreferrer">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
-          alt="LinkedIn"
-          style={linkedinImgStyle}
-        />
+      <a
+        href="https://www.linkedin.com/in/jaden-how02/"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Jaden How on LinkedIn"
+      >
+        <FaLinkedin style={linkedinIconStyle} aria-hidden="true" />
       </a>
 
       <div style={productListStyle}>
         {products.map((item) => (
-          <Product key={item.id} img={item.img} link={item.link} title={item.title} />
+          <Product
+            key={item.id}
+            icon={item.icon}
+            gradient={item.gradient}
+            tagline={item.tagline}
+            link={item.link}
+            title={item.title}
+          />
         ))}
       </div>
     </div>

@@ -18,14 +18,14 @@ const Intro = () => {
             </div>
           </div>
           <div className="i-desc">
-            I&apos;m a Computer Science Specialist at the University of Toronto, passionate about backend engineering and solving real-world problems through code. I enjoy building reliable systems and continuously expanding my technical toolkit.
+            I&apos;m a software engineer and University of Toronto Computer Science graduate, passionate about backend engineering and solving real-world problems through code. I enjoy building reliable systems and continuously expanding my technical toolkit.
           </div>
         </div>
       </div>
 
       <div className="i-right">
         <div className="i-bg"></div>
-        <img src={Me} alt="" className="i-img" />
+        <img src={Me} alt="Portrait of Jaden How" className="i-img" />
       </div>
     </div>
   );

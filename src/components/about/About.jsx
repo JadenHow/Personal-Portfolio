@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Me2 from 'assets/me2.JPG';
+import Me2 from 'assets/me2.jpg';
 import KLCC from 'assets/KLCC.jpg';
 import { FaCode, FaTools, FaCogs } from 'react-icons/fa';
 import { useWindowSize } from 'contexts/WindowSizeContext';
@@ -32,7 +32,7 @@ const About = () => {
       <Left isMobile={isMobile} isTablet={isTablet}>
         {!isMobile && !isTablet && <CardBg />}
         <Card isMobile={isMobile} isTablet={isTablet}>
-          <StyledImg src={img1 ? KLCC : Me2} alt="Profile" isAlt={img1} />
+          <StyledImg src={img1 ? KLCC : Me2} alt={img1 ? 'Petronas Twin Towers in Kuala Lumpur at night' : 'Jaden How'} isAlt={img1} />
         </Card>
       </Left>
 
@@ -43,7 +43,7 @@ const About = () => {
           </div>
           : <Title isMobile={isMobile} isTablet={isTablet}>About Me</Title>}
         <Description>
-          I&apos;m currently based in Toronto and pursuing a degree in Computer Science at the University of Toronto.
+          I&apos;m based in Toronto and graduated from the University of Toronto with a Computer Science Specialist degree.
         </Description>
         <Description>
           I&apos;m driven by a passion for backend development and aspire to become a software engineer who solves

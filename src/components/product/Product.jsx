@@ -1,7 +1,7 @@
 import React from 'react';
 import { useWindowSize } from 'contexts/WindowSizeContext';
 
-const Product = ({ img, link, title }) => {
+const Product = ({ icon: Icon, gradient, tagline, link, title }) => {
   const { isXSmall, isSmall, isMedium, isLarge } = useWindowSize();
 
   const isMobile = isXSmall || isSmall;
@@ -50,11 +50,28 @@ const Product = ({ img, link, title }) => {
     backgroundColor: 'white'
   };
 
-  const imageStyle = {
+  const coverStyle = {
     width: '100%',
     height: '250px',
-    objectFit: 'cover',
-    display: 'block'
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    gap: '0.75rem',
+    color: 'white',
+    textDecoration: 'none',
+    background: `linear-gradient(135deg, ${gradient[0]}, ${gradient[1]})`
+  };
+
+  const iconStyle = {
+    fontSize: '4rem',
+    opacity: 0.9
+  };
+
+  const taglineStyle = {
+    fontSize: '0.9rem',
+    fontWeight: 500,
+    opacity: 0.85
   };
 
   return (
@@ -70,8 +87,15 @@ const Product = ({ img, link, title }) => {
           <div style={circleStyle}></div>
         </div>
 
-        <a href={link} target="_blank" rel="noreferrer">
-          <img src={img} alt={title} style={imageStyle} />
+        <a
+          href={link}
+          target="_blank"
+          rel="noreferrer"
+          style={coverStyle}
+          aria-label={`${title} on GitHub`}
+        >
+          <Icon style={iconStyle} aria-hidden="true" />
+          <span style={taglineStyle}>{tagline}</span>
         </a>
       </div>
     </div>
